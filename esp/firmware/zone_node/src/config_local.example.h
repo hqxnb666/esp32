@@ -1,0 +1,47 @@
+#pragma once
+
+// Copy this file to config_local.h and fill in real local values there.
+// config_local.h is ignored by git and may contain real Wi-Fi or Aliyun credentials.
+
+#define APP_WIFI_SSID "YOUR_WIFI_SSID"
+#define APP_WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
+
+#define APP_ALIYUN_PRODUCT_KEY "YOUR_PRODUCT_KEY"
+#define APP_ALIYUN_BROKER "YOUR_ALIYUN_MQTT_ENDPOINT"
+#define APP_ALIYUN_PORT 1883
+
+// Replace the three blocks below with the real per-device values for each zone.
+// PlatformIO zone environments select one of these blocks through build flags.
+
+#if defined(APP_ZONE_PROFILE_A)
+
+#define APP_ZONE_ID "ZONE_A"
+#define APP_ALIYUN_DEVICE_NAME "YOUR_ZONE_A_DEVICE_NAME"
+#define APP_ALIYUN_DEVICE_SECRET "YOUR_ZONE_A_DEVICE_SECRET"
+#define APP_ALIYUN_MQTT_CLIENT_ID "YOUR_ZONE_A_MQTT_CLIENT_ID"
+#define APP_ALIYUN_MQTT_USERNAME "YOUR_ZONE_A_MQTT_USERNAME"
+#define APP_ALIYUN_MQTT_PASSWORD "YOUR_ZONE_A_MQTT_PASSWORD"
+
+#elif defined(APP_ZONE_PROFILE_B)
+
+#define APP_ZONE_ID "ZONE_B"
+#define APP_ALIYUN_DEVICE_NAME "YOUR_ZONE_B_DEVICE_NAME"
+#define APP_ALIYUN_DEVICE_SECRET "YOUR_ZONE_B_DEVICE_SECRET"
+#define APP_ALIYUN_MQTT_CLIENT_ID "YOUR_ZONE_B_MQTT_CLIENT_ID"
+#define APP_ALIYUN_MQTT_USERNAME "YOUR_ZONE_B_MQTT_USERNAME"
+#define APP_ALIYUN_MQTT_PASSWORD "YOUR_ZONE_B_MQTT_PASSWORD"
+
+#elif defined(APP_ZONE_PROFILE_C)
+
+#define APP_ZONE_ID "ZONE_C"
+#define APP_ALIYUN_DEVICE_NAME "YOUR_ZONE_C_DEVICE_NAME"
+#define APP_ALIYUN_DEVICE_SECRET "YOUR_ZONE_C_DEVICE_SECRET"
+#define APP_ALIYUN_MQTT_CLIENT_ID "YOUR_ZONE_C_MQTT_CLIENT_ID"
+#define APP_ALIYUN_MQTT_USERNAME "YOUR_ZONE_C_MQTT_USERNAME"
+#define APP_ALIYUN_MQTT_PASSWORD "YOUR_ZONE_C_MQTT_PASSWORD"
+
+#else
+
+#error "Select a zone profile with APP_ZONE_PROFILE_A, APP_ZONE_PROFILE_B, or APP_ZONE_PROFILE_C."
+
+#endif

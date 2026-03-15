@@ -1,0 +1,37 @@
+﻿{
+  "uplinkTelemetryExample": {
+    "zone": "ZONE_A",
+    "state": "WARNING",
+    "mq2Raw": 420,
+    "mq2Processed": 387.5,
+    "temperatureC": 48.0,
+    "humidityPercent": 56.0,
+    "flameStableDetected": false,
+    "buzzerActive": false,
+    "relayActive": false,
+    "demoModeActive": true,
+    "activeReason": "mq2Processed exceeded warning threshold",
+    "uptimeMs": 123456
+  },
+  "downlinkExamples": [
+    {
+      "command": "relay",
+      "value": "on"
+    },
+    {
+      "command": "relay",
+      "value": "off"
+    },
+    {
+      "command": "buzzer",
+      "value": "mute"
+    },
+    {
+      "command": "buzzer",
+      "value": "unmute"
+    },
+    {
+      "command": "request_status_publish"
+    }
+  ]
+}
